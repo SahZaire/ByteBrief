@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BriefByte</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/appLogo.png')}}" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='images/appLogo.png')}}" alt="">
+
+        <div class='search'>
+            <div class='searchbar-out'>
+                <div class='searchbar-in'>
+                    <span class="material-symbols-outlined">
+                        search</span>
+
+                    <input id="myInput" type="search" placeholder='Search...'  />
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li class="feedClick" >Feed</li>
+                <li>Recommendation</li>
+                <div class="dropdown">
+                    <li> <span id="caticons" class="material-symbols-outlined">
+                        apps</span></li>
+                    <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div>
+                  </div>
+                  
+                <li> <span id="caticons" class="material-symbols-outlined">
+                        tune</span></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="scrollableBody">
+        <div class="flexNews">
+            <div class="bigNewsBox">
+                <div id="swiper2" class="swiper">
+
+                    <div id="swiper_head" class="swiper-wrapper">
+
+                        <!-- <div class="swiper-slide">
+                        <div id="label1" class="label">
+                            <h1>Bill Ackman says it's 'pathetic' that law firms and other corporations feel they have to 'police' antisemitism on university campuses</h1>
+                        
+                        </div>
+                      
+                    </div> -->
+                        <!-- <div class="swiper-slide">
+                        <div id="label2" class="label">
+                            <h1>Netanyahu is focused on his own political 'survival,' not the war in Gaza, says ex-IDF intelligence chief</h1>
+                           
+                        </div>
+                    </div> -->
+                        <!-- <div class="swiper-slide">
+                        <div class="label" id="label3">
+                            <h1>Democrats sound alarms over No Labels third-party bid</h1>
+                           
+                        </div>
+                    </div> -->
+                        <!-- <div class="swiper-slide">
+                        <div class="label" id="label4">
+                            <h1>Amid Hezbollah-Israel clashes, Christian village in Lebanon plans for war</h1>
+                          
+                        </div>
+                    </div> -->
+                        <!-- <div class="swiper-slide">
+                        <div class="label" id="label5">
+                            <h1>Serbia to hold snap elections as president calls for country to be ‘united’</h1>
+                         
+                        </div>
+                    </div> -->
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+            </div>
+            <div class="scrollNewsBox">
+
+                <div class="feedScroll">
+
+                    <div class="header">My Feed</div>
+
+                    <div id="scrollableFeed1" class="scrollableFeed">
+
+                        <!-- <div class="flexChildFeed">
+                        <img src="https://www.aljazeera.com/wp-content/uploads/2023/11/2023-11-01T114644Z_334878813_RC2944AXB80Z_RTRMADP_3_SERBIA-ELECTION-1698894149.jpg?resize=1920%2C1440" class="newsImgFeed"  alt="">
+
+                        <p class="newsHeadFeed">Netanyahu is focused on his own political 'survival,' not the war in Gaza, says ex-IDF intelligence chief</p>
+                    </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flexHere">
+
+            <p class="trendingHead0">Trending News</p>
+            <p class="trendingHead1">Recommendation</p>
+
+        </div>
+        <div class="flexNews">
+
+            <div class="trendingParentFlex">
+
+                <div class="trendingParentFlexBhai" id="trendingParentFlex">
+                    <!-- <div class="trendingChildBox">
+
+                    <img class="imageTrending" src="https://www.aljazeera.com/wp-content/uploads/2023/11/2023-11-01T114644Z_334878813_RC2944AXB80Z_RTRMADP_3_SERBIA-ELECTION-1698894149.jpg?resize=1920%2C1440" alt="">
+
+                    <p class="sourceTrending">Al Jazeera</p>
+
+                    <p class="headTrending">Netanyahu is focused on his own political 'survival,' not the war Gaza, says ex-IDF intelligence chief</p>
+
+                </div> -->
+
+                </div>
+
+
+            </div>
+
+
+
+            <div id="scrollableFeed2" class="reccParentFlex">
+
+
+
+                <!-- <div class="flexChildFeed">
+                    <img src="https://www.aljazeera.com/wp-content/uploads/2023/11/2023-11-01T114644Z_334878813_RC2944AXB80Z_RTRMADP_3_SERBIA-ELECTION-1698894149.jpg?resize=1920%2C1440" class="newsImgFeed"  alt="">
+
+                    <p class="newsHeadFeed">Netanyahu is focused on his own political 'survival,' not the war in Gaza, says ex-IDF intelligence chief</p>
+                </div> -->
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- this htmltag includes absolute html page for news feed -->
+    <div id="swiper-head2" class="feedSummary"></div>
+    <div id="searchPage" class="searchPageClass"></div>
+
+    <script type="module" src="{{ url_for('static', filename='js/backend/main.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+
+</body>
+
+</html>
