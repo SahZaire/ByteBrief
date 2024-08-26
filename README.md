@@ -51,7 +51,7 @@ Team Members :
     python -m spacy download en_core_web_sm
     ```
 
-## Usage
+## Try it!
 
 3. Run the main script:
 
